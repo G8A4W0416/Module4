@@ -45,6 +45,20 @@ class MyTestCase(unittest.TestCase):
         with self.subTest():
             self.assertEqual(45.86, coupon_calculations.calculate_price(49.99, 10.00, .20))
 
+    def test_price_under_over_fifty(self):
+        with self.subTest():
+            self.assertEqual(42.93, coupon_calculations.calculate_price(50.00, 5.00, .10))
+        with self.subTest():
+            self.assertEqual(49.55, coupon_calculations.calculate_price(60.00, 5.00, .15))
+        with self.subTest():
+            self.assertEqual(63.60, coupon_calculations.calculate_price(80.00, 5.00, .20))
+        with self.subTest():
+            self.assertEqual(38.16, coupon_calculations.calculate_price(50.00, 10.00, .10))
+        with self.subTest():
+            self.assertEqual(45.05, coupon_calculations.calculate_price(60.00, 10.00, .15))
+        with self.subTest():
+            self.assertEqual(59.36, coupon_calculations.calculate_price(80.00, 10.00, .20))
+
 
 if __name__ == '__main__':
     unittest.main()
