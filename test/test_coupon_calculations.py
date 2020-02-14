@@ -4,7 +4,7 @@ from store import coupon_calculations
 
 class MyTestCase(unittest.TestCase):
     def test_price_under_ten_1(self):
-        self.assertEqual(8.81, coupon_calculations.calculate_price(8.00, 5.00, .10))
+        self.assertEqual(8.49, coupon_calculations.calculate_price(8.00, 5.00, .10))
 
     # The following tests default to the 5.95 shipping cost since the item price will be zero when it matches or is
     # less than the cash-off coupon amount.
