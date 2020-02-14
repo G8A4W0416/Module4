@@ -2,15 +2,22 @@ SALES_TAX = .06
 
 
 def calculate_price(price, cash_coupon, percent_coupon):
-    if price <= 5 and cash_coupon == 5 or price < 10 and cash_coupon == 10:
-        total_price = 5.95
+    shipping = 0.00
+
+    if price < 10:
+        shipping = 5.95
+    elif 10 <= price < 30:
+        shipping = 7.95
+
+    if price <= cash_coupon:
+        total_price = shipping
     else:
         deduct_cash_coupon = price - cash_coupon
         pct_coupon_amt = deduct_cash_coupon * percent_coupon
         deduct_pct_coupon = deduct_cash_coupon - pct_coupon_amt
         tax_amt = deduct_pct_coupon * SALES_TAX
-        deduct_tax_amt = deduct_pct_coupon - tax_amt
-        total_price = round(deduct_tax_amt + 5.95, 2)
+        add_tax_amt = deduct_pct_coupon + tax_amt
+        total_price = round(add_tax_amt + shipping, 2)
 
     return total_price
 

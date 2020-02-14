@@ -5,7 +5,7 @@ from store import coupon_calculations
 class MyTestCase(unittest.TestCase):
     def test_price_under_ten(self):
         with self.subTest():
-            self.assertEqual(8.49, coupon_calculations.calculate_price(8.00, 5.00, .10))
+            self.assertEqual(8.81, coupon_calculations.calculate_price(8.00, 5.00, .10))
         with self.subTest():
             self.assertEqual(5.95, coupon_calculations.calculate_price(5.00, 5.00, .15))
         with self.subTest():
@@ -21,7 +21,7 @@ class MyTestCase(unittest.TestCase):
         with self.subTest():
             self.assertEqual(12.72, coupon_calculations.calculate_price(10.00, 5.00, .10))
         with self.subTest():
-            self.assertEqual(21.47, coupon_calculations.calculate_price(20.00, 5.00, .15))
+            self.assertEqual(21.46, coupon_calculations.calculate_price(20.00, 5.00, .15))
         with self.subTest():
             self.assertEqual(29.14, coupon_calculations.calculate_price(29.99, 5.00, .20))
         with self.subTest():
