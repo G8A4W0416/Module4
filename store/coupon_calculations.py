@@ -1,3 +1,16 @@
+"""
+Program coupon_calculations.py
+
+Author: Greg Wilhelm
+
+Last date modified: 2/14/2020
+
+The purpose of this program is to return the total price of an item after applying a cash off coupon then, if
+applicable, a percent discount coupon. Once the coupons have been applied, sales tax and shipping are added.
+
+"""
+
+
 SALES_TAX = .06
 
 
