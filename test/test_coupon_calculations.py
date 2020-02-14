@@ -31,6 +31,20 @@ class MyTestCase(unittest.TestCase):
         with self.subTest():
             self.assertEqual(24.90, coupon_calculations.calculate_price(29.99, 10.00, .20))
 
+    def test_price_under_between_thirty_fifty(self):
+        with self.subTest():
+            self.assertEqual(35.80, coupon_calculations.calculate_price(30.00, 5.00, .10))
+        with self.subTest():
+            self.assertEqual(43.49, coupon_calculations.calculate_price(40.00, 5.00, .15))
+        with self.subTest():
+            self.assertEqual(50.10, coupon_calculations.calculate_price(49.99, 5.00, .20))
+        with self.subTest():
+            self.assertEqual(31.03, coupon_calculations.calculate_price(30.00, 10.00, .10))
+        with self.subTest():
+            self.assertEqual(38.98, coupon_calculations.calculate_price(40.00, 10.00, .15))
+        with self.subTest():
+            self.assertEqual(45.86, coupon_calculations.calculate_price(49.99, 10.00, .20))
+
 
 if __name__ == '__main__':
     unittest.main()
