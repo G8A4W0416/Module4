@@ -35,7 +35,7 @@ class MyTestCase(unittest.TestCase):
         with self.subTest():
             self.assertEqual(35.80, coupon_calculations.calculate_price(30.00, 5.00, .10))
         with self.subTest():
-            self.assertEqual(43.49, coupon_calculations.calculate_price(40.00, 5.00, .15))
+            self.assertEqual(43.48, coupon_calculations.calculate_price(40.00, 5.00, .15))
         with self.subTest():
             self.assertEqual(50.10, coupon_calculations.calculate_price(49.99, 5.00, .20))
         with self.subTest():

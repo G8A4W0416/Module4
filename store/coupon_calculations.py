@@ -8,6 +8,8 @@ def calculate_price(price, cash_coupon, percent_coupon):
         shipping = 5.95
     elif 10 <= price < 30:
         shipping = 7.95
+    elif 30 <= price < 50:
+        shipping = 11.95
 
     if price <= cash_coupon:
         total_price = shipping
